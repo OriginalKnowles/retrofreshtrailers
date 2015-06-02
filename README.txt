@@ -9,9 +9,14 @@ To run site using PyCharm
 3. Run file with Alt-Shift-F10
 4. Right click on "index.html" in main directory and select "Open in Browser"
 
+For the last built version just open the "index.html" file in your browser.
+
+Alternatively to run launch the site from the command line type: python entertainment_center.py
+and the generated page will appear in your default browser.
+
 That's It !
 
-Alternatively for the last built version just open the "index.html" file in your browser.
+
 
 
 NOTES:

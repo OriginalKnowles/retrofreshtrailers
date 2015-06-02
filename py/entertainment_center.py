@@ -3,7 +3,7 @@
 
 import csv
 import fresh_tomatoes
-from movie.py import media
+import media
 
 
 # This reads in the Retro Fresh movie trailers main list, creates and object
@@ -34,9 +34,6 @@ def read_in_csv(csv_file):
             movie_release_date.append(row[4])
             movie_raking.append(row[5])
 
-        # counter = len(movie_titles)
-        # counter = int(counter)
-        # print(counter)
         # Create movie objects for each movie parsing in the values
         # stored in the above lists.
         for i in range(0, 13):
@@ -45,7 +42,6 @@ def read_in_csv(csv_file):
                                    movie_posters[i], movie_trailers[i],
                                    movie_release_date[i], movie_raking[i])
                 movie_objects.append(temp)
-        # Test 'print' function
         print(len(movie_objects))
 
     # Returns all the created movie objects in one list
