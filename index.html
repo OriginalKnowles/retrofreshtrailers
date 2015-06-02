@@ -1,0 +1,154 @@
+<head>
+    <meta charset="utf-8">
+    <title>Retro Fresh Kung Fu Trailers!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head><!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+              <div class="col-md-12 col-lg-12 logoheader">
+                  <a href="#"><img class="img-responsive center-block" src="img/retrofreshlogo.png" style="width:400"></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="KQMNllz6aE0" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/4/43/DrunkenMasterMoviePoster.jpg" width="220" height="342" class="fade">
+    <h2>Drunken Master</h2>
+<!--    <p>An undisciplined boy must learn Drunken Fist Kung Fu in order to stop an assassin.</p>-->
+    <p>Year: 1978</p>
+    <p>Ranking: 8</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="rWR8cZhc0N0" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/7/71/Winners-and-sinners-poster.jpg" width="220" height="342" class="fade">
+    <h2>Winners & Sinners</h2>
+<!--    <p>Fresh from prison, five friends try to stay crime free but inadvertently find themselves caught in a Triad war.</p>-->
+    <p>Year: 1983</p>
+    <p>Ranking: 7</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="vc8ks75Tido" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/a/a3/Police-Story-poster.jpg" width="220" height="342" class="fade">
+    <h2>Police Story</h2>
+<!--    <p>A virtuous Hong Kong police officer must clear his good name when the drug lords he is after frame him for the murder of a dirty cop.</p>-->
+    <p>Year: 1985</p>
+    <p>Ranking: 8</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="p2EqPGXs10g" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/b/b4/Onceuponatimeinchina.jpg" width="220" height="342" class="fade">
+    <h2>Once Upon a Time in China</h2>
+<!--    <p>Wong Fei-Hung must  his Aunt Yee while defending his martial arts school from the local militia.</p>-->
+    <p>Year: 1991</p>
+    <p>Ranking: 8</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="9O6_N4mQBos" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/f/f4/Ninja-Scroll-Poster.jpg" width="220" height="342" class="fade">
+    <h2>Ninja Scroll</h2>
+<!--    <p>A mysterious vagabond sets out on a journey to confront his past. Little does he know he is up against a demonic force of killers, with a ghost from his past as the leader.</p>-->
+    <p>Year: 1993</p>
+    <p>Ranking: 9</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="nAYUv9wjV48" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/1/11/ONG-BAK.jpg" width="220" height="342" class="fade">
+    <h2>Ong-Bak: Muay Thai Warrior</h2>
+<!--    <p>When the head of a statue sacred to a village is stolen, a young martial artist goes and finds himself taking on the underworld to retrieve it.</p>-->
+    <p>Year: 2003</p>
+    <p>Ranking: 7</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="B3NlErHqPMs" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/6/6b/Game-of-death-poster.jpg" width="220" height="342" class="fade">
+    <h2>Game of Death</h2>
+<!--    <p>A martial arts movie star must fake his death to find the people who are trying to kill him.</p>-->
+    <p>Year: 1978</p>
+    <p>Ranking: 7</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="04aaKOuyqB8" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/8/8c/NewPoliceStoryposter.jpg" width="220" height="342" class="fade">
+    <h2>New Police Story</h2>
+<!--    <p>A hero cop accidentally leads his team into a trap from which he is the only survivor. Drowning his guilt in booze, he is eventually assigned a new younger partner who turns out to have his own secrets.</p>-->
+    <p>Year: 2004</p>
+    <p>Ranking: 9</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="BlyZPgn523I" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/4/4a/Fearless_film.jpg" width="220" height="342" class="fade">
+    <h2>Fearless</h2>
+<!--    <p>A biography of Chinese Martial Arts Master Huo Yuanjia, who is the founder and spiritual guru of the Jin Wu Sports Federation.</p>-->
+    <p>Year: 2006</p>
+    <p>Ranking: 8</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="SZtSwjk4aD8" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/2/2f/Ipmanposter02.jpg" width="220" height="342" class="fade">
+    <h2>Ip Man</h2>
+<!--    <p>A semi-biographical account of Yip Man, the first martial arts master to teach the Chinese martial art of Wing Chun.</p>-->
+    <p>Year: 2008</p>
+    <p>Ranking: 9</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="PkULMOFpuCo" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/6/6b/The_Raid_Redemption.jpg" width="220" height="342" class="fade">
+    <h2>The Raid: Redemption</h2>
+<!--    <p>A S.W.A.T. team becomes trapped in a tenement run by a ruthless mobster and his army of killers and thugs.</p>-->
+    <p>Year: 2012</p>
+    <p>Ranking: 8</p>
+</div><div class="col-md-6 col-lg-4 movie-tile text-center"
+     data-trailer-youtube-id="81jCPIag4KA" data-toggle="modal" data-target="#trailer">
+    <img src="http://upload.wikimedia.org/wikipedia/en/e/ef/Enter_the_dragon.jpg" width="220" height="342" class="fade">
+    <h2>Enter the Dragon</h2>
+<!--    <p>A martial artist agrees to spy on a reclusive crime lord using his invitation to a tournament there as cover.</p>-->
+    <p>Year: 1973</p>
+    <p>Ranking: 7</p>
+</div>
+    </div>
+  </body>
+</html>
